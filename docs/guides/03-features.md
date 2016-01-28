@@ -117,7 +117,7 @@ Two important things:
 By default, Waffle will render each cell using the value of the current object attribute (current object is the object rendered in a row).
 This should be enough, say 70% of time, but you can customize the way a cell is rendered.
 
-Suppose you want to want to display uppercased or capitalized values in a cell:
+Suppose you want to display uppercased or capitalized values in a cell:
 
 ```javascript
 Waffle.create(document.getElementById('waffle'), {
@@ -141,7 +141,7 @@ function capitalize(v) {
 }
 ```
 
-You can also chain renderers (the result of the previous renderer will given as the parameter of the next renderer).
+You can also chain renderers (the result of the previous renderer will be given as the parameter of the next renderer).
 Here is an example if you want to be sure `null` or `undefined` values are rendered as an empty string:
 
 ```javascript
@@ -209,7 +209,7 @@ By default, Waffle comes with renderers available out of the box:
 - `$identity`: return the parameter (mainly used internally).
 - `$empty`: return an empty string (mainly used internally).
 
-Note that these renderers can be overrided:
+Note that these renderers are overridable:
 
 ```javascript
 // Override default capitalizer to capitalize each word in a string.
@@ -218,7 +218,7 @@ Waffle.addRenderer('$capitalize', function (v) {
 });
 ```
 
-**Important:** A renderer should be a very simple function (basically, returns a formatted value). Be careful to not define complex function to avoid performance issues.
+**Important:** A renderer should be a very simple function (basically, returns a formatted value). Be careful not to define complex function to avoid performance issues.
 
 ## Selection
 
